@@ -1,19 +1,17 @@
 user:
-    name: pigmonkey
+    name: diomedet
     uid: 1000
-    group: pigmonkey
+    group: diomedet
     shell: /usr/bin/zsh
-    email:  peter@havenaut.net
+    email:  diomede.tripicchio@gmail.com
     log:
         dir: log
         rotate: 8
 
-hostname: nous
+hostname: arch-test
 
 dotfiles:
-    url: git@github.com:pigmonkey/dotfiles.git
-    destination: projects/dotfiles
-    rcup_flags: -fx README.md
+    url: git@github.com:oeN/dotfiles.git
 
 aur:
     dir: aur
@@ -22,8 +20,6 @@ aur:
         - downgrade
         - zplug
         - miller
-        - myrepos
-        - ctmg
 
 ssh:
     port: 22
@@ -236,7 +232,7 @@ gdm:
         tap_to_click: True
     accessibility_menu: True
 
-desktop_environment: i3
+desktop_environment: xmonad
 gnome:
     night_light:
         enabled: True
@@ -300,6 +296,7 @@ aur_fonts:
     - ttf-quintessential
     - ttf-signika
     - otf-symbola
+    - nerd-fonts-jetbrains-mono
 
 syncthing:
     run_on: trusted
@@ -313,8 +310,5 @@ units:
 
 pkgfile:
     run_on: trusted
-
-hardened:
-    enable_namespaces: true
 
 kernel_parameters: "quiet consoleblank=60"

@@ -13,13 +13,13 @@
   file: path=/usr/share/backgrounds state=directory
 
 - name: Push LightDM greeter background
-  copy: src=onosendai.jpg dest=/usr/share/backgrounds/onosendai.jpg
+  copy: src=background.png dest=/usr/share/backgrounds/lightdm-background.png
 
 - name: Specify LightDM greeter background
   lineinfile: dest=/etc/lightdm/lightdm-gtk-greeter.conf
               regexp="^background="
               state=present
-              line="background=/usr/share/backgrounds/onosendai.jpg"
+              line="background=/usr/share/backgrounds/lightdm-background.png"
 
 - name: Hide user images
   lineinfile: dest=/etc/lightdm/lightdm-gtk-greeter.conf

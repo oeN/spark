@@ -48,6 +48,3 @@
 - name: Install user SSH key
   copy: src={{ ssh.user_key }} dest=/home/{{ user.name }}/.ssh/id_rsa mode=600 owner={{ user.name }} group={{ user.group }}
   when: ssh.user_key is defined
-
-- name: Install Mosh
-  pacman: name=mosh state=present
