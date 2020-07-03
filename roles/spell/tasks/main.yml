@@ -4,6 +4,7 @@
     name:
       - hunspell
       - hunspell-en_US
+      - hunspell-it
     state: present
   tags:
     - hunspell
@@ -13,6 +14,7 @@
     name:
       - aspell
       - aspell-en
+      - aspell-it
     state: present
   tags:
     - aspell

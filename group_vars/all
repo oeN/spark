@@ -52,7 +52,8 @@ network:
         - faeec88c-79ec-4840-ab25-ea356af8a81b
 
 editors:
-    - gvim
+    - code
+    - vim
 
 video_drivers:
     - libva-intel-driver
@@ -92,11 +93,8 @@ filesystem_packages:
     - exfat-utils
 
 browser_choices:
-    - firefox -P default
-    - firefox -P work
+    - firefox
     - firewarden chromium
-    - firewarden -c qutebrowser
-    - tor-browser-en
     - play
     - qcode
     - "| xclip -selection c"
@@ -295,7 +293,6 @@ aur_fonts:
     - ttf-oswald
     - ttf-quintessential
     - ttf-signika
-    - otf-symbola
     - nerd-fonts-jetbrains-mono
 
 syncthing:
