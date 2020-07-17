@@ -32,7 +32,7 @@
       enabled: yes
       state: started
 
-- name: Disable dhcpcd service
+- name: Enable dhcpcd service
   service:
       name: dhcpcd.service
-      enabled: no
+      enabled: yes
