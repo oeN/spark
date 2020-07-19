@@ -1,0 +1,14 @@
+--- 
+- name: Install Slack
+  aur:
+    name: slack-desktop
+    user: "{{ user.name }}"
+  tags:
+    - slack
+
+- name: Install Discord
+  pacman:
+    name: discord
+    state: present
+  tags:
+    - discord

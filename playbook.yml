@@ -87,6 +87,9 @@
     # - { role: aria2, tags: ['aria2'] }
     - { role: android, tags: ['android'] }
     - { role: ripgrep, tags: ['ripgrep'] }
+    - { role: docker, tags: ['docker'] }
+    - { role: messaging, tags: ['messaging'] }
+    - { role: oh-my-zsh, tags: ['oh-my-zsh'] }
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"

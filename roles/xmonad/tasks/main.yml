@@ -5,6 +5,7 @@
     name:
       - xmonad
       - xmobar
+      - xmonad-contrib
     state: present
 
 - include: rofi.yml

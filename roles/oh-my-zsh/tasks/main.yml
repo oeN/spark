@@ -1,0 +1,7 @@
+---
+- name: Checkout Oh My Zsh repo
+  become: yes
+  become_user: "{{ user.name }}"
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git 
+    dest: /home/{{ user.name }}/.oh-my-zsh
