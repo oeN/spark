@@ -1,0 +1,45 @@
+---
+- name: Checkout asdf repo
+  become: yes
+  become_user: "{{ user.name }}"
+  git:
+    repo: https://github.com/asdf-vm/asdf.git 
+    dest: /home/{{ user.name }}/.asdf
+    version: v0.7.8
+
+- name: Add asdf pyhton plugin
+  become: yes
+  become_user: "{{ user.name }}"
+  command: asdf plugin add python
+  ignore_errors: yes
+
+- name: Install a python version with asdf
+  become: yes
+  become_user: "{{ user.name }}"
+  command: asdf install python 3.8.2
+
+- name: Set a global python version
+  become: yes
+  become_user: "{{ user.name }}"
+  command: asdf global python 3.8.2
+
+- name: Add asdf nodejs plugin
+  become: yes
+  become_user: "{{ user.name }}"
+  command: asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  ignore_errors: yes
+
+- name: Import the Node.js release team's OpenPGP keys 
+  become: yes
+  become_user: "{{ user.name }}"
+  command: bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+- name: Install a nodejs version with asdf
+  become: yes
+  become_user: "{{ user.name }}"
+  command: asdf install nodejs 14.5.0
+
+- name: Set a global nodejs version
+  become: yes
+  become_user: "{{ user.name }}"
+  command: asdf global nodejs 14.5.0

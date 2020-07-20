@@ -18,7 +18,6 @@ aur:
     packages:
         - yay
         - downgrade
-        - zplug
         - miller
 
 ssh:
@@ -91,10 +90,10 @@ filesystem_packages:
     - exfat-utils
 
 browser_choices:
+    - chromium
     - firefox
     - firewarden chromium
     - play
-    - qcode
     - "| xclip -selection c"
 
 passwordless_sudo:
@@ -228,7 +227,7 @@ gdm:
         tap_to_click: True
     accessibility_menu: True
 
-desktop_environment: gnome
+desktop_environment: xmonad
 gnome:
     night_light:
         enabled: True

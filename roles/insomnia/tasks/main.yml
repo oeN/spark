@@ -1,0 +1,8 @@
+---
+- name: Install insomnia
+  aur:
+    name: insomnia
+    user: "{{ user.name }}"
+  tags:
+    - aur
+    - packages
